@@ -1,7 +1,7 @@
 ## BASH CONFIG (.bashrc)
 
 ## Sync bashrc with dropbox bashrc...
-test -s ~/Dropbox/Creations/Rice/.bashrc && . ~/Dropbox/Creations/Rice/.bashrc || true
+#test -s ~/Dropbox/Creations/Rice/.bashrc && . ~/Dropbox/Creations/Rice/.bashrc || true
 alias python=python3.5
 
 ################################################################
@@ -57,7 +57,7 @@ LS_COLORS='fi=32:ln=91:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35:*.rpm=90'
 export LS_COLORS
 
 # export PS1="\[\033[38;5;8m\][\[$(tput sgr0)\]\[\033[38;5;57m\]some\[$(tput sgr0)\]\[\033[38;5;129m\]@\[$(tput sgr0)\]\[\033[38;5;63m\]n0where\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;37m\]\W\[$(tput sgr0)\]\[\033[38;5;8m\]]\[$(tput sgr0)\]\[\033[38;5;129m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
-export PS1="\[\033[38;5;8m\][\[$(tput sgr0)\]\[\033[38;5;57m\]\u\[$(tput sgr0)\]\[\033[38;5;129m\]@\[$(tput sgr0)\]\[\033[38;5;63m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;37m\]\W\[$(tput sgr0)\]\[\033[38;5;8m\]]\[$(tput sgr0)\]\[\033[38;5;129m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
+#export PS1="\[\033[38;5;8m\][\[$(tput sgr0)\]\[\033[38;5;57m\]\u\[$(tput sgr0)\]\[\033[38;5;129m\]@\[$(tput sgr0)\]\[\033[38;5;63m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;37m\]\W\[$(tput sgr0)\]\[\033[38;5;8m\]]\[$(tput sgr0)\]\[\033[38;5;129m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
 # export PS1='[\A] \u @\[$(tput sgr0)\]\[\033[38;5;63m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;37m\]\W\[$(tput sgr0)\]\[\033[38;5;8m\]]\[$(tput sgr0)\]\[\033[38;5;129m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]'
 
 
