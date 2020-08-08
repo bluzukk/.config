@@ -1,7 +1,7 @@
 ## BASH CONFIG (.bashrc)
 
 ## Sync bashrc with dropbox bashrc...
-#test -s ~/Dropbox/Creations/Rice/.bashrc && . ~/Dropbox/Creations/Rice/.bashrc || true
+test -s ~/Sync/Creations/Rice/.bashrc && . ~/Sync/Creations/Rice/.bashrc || true
 alias python=python3.5
 
 ################################################################
@@ -15,8 +15,9 @@ alias f="firefox"
 alias q="qutebrowser"
 # alias q="exit"
 alias ll="ls -l"
-alias ls="ls --color=always"
-alias la="ls -A"
+alias ls="ls --color=always --group-directories-first"
+alias sl="ls --color=always --group-directories-first"
+alias la="ls -A --group-directories-first"
 alias grep="grep --color"
 alias ka="killall"
 alias t="st &"
@@ -31,9 +32,9 @@ alias 30min="sudo shutdown -P 30"
 alias 45min="sudo shutdown -P 45"
 alias nvmetemp="sudo nvme smart-log /dev/nvme0 | grep temperature"
 alias cpu="for i in {0..10000};do lscpu | grep 'CPU MHz';sleep 0.05;clear;done"
+alias bs="vim ~/.bashrc"
 alias xcfg="vim -p ~/.bashrc ~/.Xdefaults ~/.xinitrc ~/"
 alias mp3="youtube-dl -x --audio-format mp3"
-
 
 ################################################################
 # Git
