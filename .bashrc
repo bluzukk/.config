@@ -25,8 +25,12 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias mu="mupdf"
 
+alias proj="cd ~/Sync/Projects"
+alias cr="cd ~/Sync/Creations"
+
+
 ################################################################
-# PROGRAMM SHORTCUT
+# PROGRAMM SHORTCUTS
 ################################################################
 alias 30min="sudo shutdown -P 30"
 alias 45min="sudo shutdown -P 45"
@@ -37,14 +41,14 @@ alias xcfg="vim -p ~/.bashrc ~/.Xdefaults ~/.xinitrc ~/"
 alias mp3="youtube-dl -x --audio-format mp3"
 
 ################################################################
-# Git
+# GIT
 ################################################################
 alias gstat="git status"
 alias gcheck="git checkout"
 alias gpull="git pull"
 
 ################################################################
-# Stuff
+# STUFF
 ################################################################
 alias rot13="tr 'A-Za-z' 'N-ZA-Mn-za-m'"
 alias fetch="neofetch --config off --block_range off --bold off --uptime_shorthand on --gtk_shorthand on --colors 8 1 8 5 5 9 --ascii_distro off --disable host uptime shell resolution theme icons memory"
@@ -52,14 +56,11 @@ alias eip_local="LANG=c ifconfig wlp3s0 | grep 'inet addr' | awk -F: '{print $2}
 alias eip="curl https://ipecho.net/plain"
 alias wifi_scan="iwlist wlp3s0 scan | grep ESSID"
 
-
-
-LS_COLORS='fi=32:ln=91:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35:*.rpm=90'
-export LS_COLORS
-
-# export PS1="\[\033[38;5;8m\][\[$(tput sgr0)\]\[\033[38;5;57m\]some\[$(tput sgr0)\]\[\033[38;5;129m\]@\[$(tput sgr0)\]\[\033[38;5;63m\]n0where\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;37m\]\W\[$(tput sgr0)\]\[\033[38;5;8m\]]\[$(tput sgr0)\]\[\033[38;5;129m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
-#export PS1="\[\033[38;5;8m\][\[$(tput sgr0)\]\[\033[38;5;57m\]\u\[$(tput sgr0)\]\[\033[38;5;129m\]@\[$(tput sgr0)\]\[\033[38;5;63m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;37m\]\W\[$(tput sgr0)\]\[\033[38;5;8m\]]\[$(tput sgr0)\]\[\033[38;5;129m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
-# export PS1='[\A] \u @\[$(tput sgr0)\]\[\033[38;5;63m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;37m\]\W\[$(tput sgr0)\]\[\033[38;5;8m\]]\[$(tput sgr0)\]\[\033[38;5;129m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]'
+################################################################
+# TEMPLATES
+################################################################
+alias temp="cd ~/Sync/Creations/Templates/"
+alias tex="cp -r ~/Sync/Creations/Templates/latex ./ && echo 'Copied latex template'"
 
 
 # HSTR configuration - add this to ~/.bashrc
