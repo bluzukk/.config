@@ -1,6 +1,6 @@
 ## BASH CONFIG (.bashrc)
 
-## Sync bashrc with dropbox bashrc...
+## Sync bashrc with synced bashrc...
 test -s ~/Sync/Creations/Rice/.bashrc && . ~/Sync/Creations/Rice/.bashrc || true
 alias python=python3.5
 
@@ -8,11 +8,7 @@ alias python=python3.5
 # BASICS
 ################################################################
 alias c="clear"
-alias r="ranger"
-alias sr="sudo ranger"
-alias h="htop"
-alias f="firefox"
-alias q="qutebrowser"
+alias cat="lolcat"
 # alias q="exit"
 alias ll="ls -l"
 alias ls="ls --color=always --group-directories-first"
@@ -23,7 +19,6 @@ alias ka="killall"
 alias t="st &"
 alias ..="cd .."
 alias ...="cd ../.."
-alias mu="mupdf"
 
 alias proj="cd ~/Sync/Projects"
 alias cr="cd ~/Sync/Creations"
@@ -32,12 +27,22 @@ alias cr="cd ~/Sync/Creations"
 ################################################################
 # PROGRAMM SHORTCUTS
 ################################################################
+alias h="htop"
+alias f="firefox"
+alias q="qutebrowser"
+alias r="ranger"
+alias sr="sudo ranger"
+alias m="mupdf"
+alias music="cmus"
+
+
+alias bs="vim ~/.bashrc"
+alias xcfg="vim -p ~/.bashrc ~/.Xdefaults ~/.xinitrc ~/"
+
 alias 30min="sudo shutdown -P 30"
 alias 45min="sudo shutdown -P 45"
 alias nvmetemp="sudo nvme smart-log /dev/nvme0 | grep temperature"
 alias cpu="for i in {0..10000};do lscpu | grep 'CPU MHz';sleep 0.05;clear;done"
-alias bs="vim ~/.bashrc"
-alias xcfg="vim -p ~/.bashrc ~/.Xdefaults ~/.xinitrc ~/"
 alias mp3="youtube-dl -x --audio-format mp3"
 
 ################################################################
@@ -46,6 +51,7 @@ alias mp3="youtube-dl -x --audio-format mp3"
 alias gstat="git status"
 alias gcheck="git checkout"
 alias gpull="git pull"
+alias clean="make clean"
 
 ################################################################
 # STUFF
@@ -60,8 +66,8 @@ alias wifi_scan="iwlist wlp3s0 scan | grep ESSID"
 # TEMPLATES
 ################################################################
 alias temp="cd ~/Sync/Creations/Templates/"
-alias tex="cp -r ~/Sync/Creations/Templates/latex ./ && echo 'Copied latex template'"
-
+alias tex_paper="cp -r ~/Sync/Creations/Templates/latexPaper ./ && echo 'Copied latex template'"
+alias tex_abgabe="cp -r ~/Sync/Creations/Templates/latexAbgabe ./ && echo 'Copied latex template'"
 
 # HSTR configuration - add this to ~/.bashrc
 alias hh=hstr                    # hh to be alias for hstr
