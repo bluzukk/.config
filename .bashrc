@@ -1,15 +1,56 @@
 ## BASH CONFIG (.bashrc)
 
-## Sync bashrc with synced bashrc...
+# Ignore this mess
+if [[ ! ${DISPLAY} ]]; then
+    clear
+    GREEN="\e[32m"
+    BLUE="\e[94m"
+    PURPLE="\e[35m"
+    GRAY="\e[90m"
+    NRML="\e[39m"
+    NRML_BG="\e[49m"
+
+    NUM="$(echo $((1 + RANDOM % 3)))"
+    if [ $NUM == 1 ]
+    	then
+    		FG=$GREEN
+    elif [ $NUM == 2 ]
+    	then
+    		FG=$BLUE
+    else
+    		FG=$PURPLE
+    	fi
+    # FG=$GRAY
+    # BG=$BLUE
+    # echo -e "
+    #                                  $FG██$BG╗$FG     ██$BG╗$FG███$BG╗$FG   ██$BG╗$FG██$BG╗$FG   ██$BG╗$FG██$BG╗$FG  ██$BG╗$FG    ████████$BG╗$FG ██████$BG╗$FG ██████$BG╗$FG     ██$BG╗$FG  ██$BG╗$FG██████$BG╗$FG ██$BG╗$FG  ██$BG╗$FG
+    #                                  ██$BG║$FG    ███$BG║$FG████$BG╗$FG  ██$BG║$FG██$BG║$FG   ██$BG║╚$FG██$BG╗$FG██$BG╔╝$FG    $BG╚══$FG██$BG╔══╝$FG██$BG╔═══$FG██$BG╗$FG██$BG╔══$FG██$BG╗    $FG██$BG║$FG ██$BG╔╝╚════$FG██$BG╗$FG██$BG║$FG ██$BG╔╝$FG
+    #                                  ██$BG║$FG    $BG╚$FG██$BG║$FG██$BG╔$FG██$BG╗ $FG██$BG║$FG██$BG║   $FG██$BG║ $BG╚$FG███$BG╔╝        $FG██$BG║   $FG██$BG║   $FG██$BG║$FG██████$BG╔╝$FG    █████$BG╔╝  $FG█████$BG╔╝$FG█████$BG╔╝$FG
+    #                                  ██$BG║$FG     ██$BG║$FG██$BG║╚$FG██$BG╗$FG██$BG║$FG██$BG║ $FG  ██$BG║ $FG██$BG╔$FG██$BG╗  $FG      ██$BG║  $FG ██$BG║$FG   ██$BG║$FG██$BG╔═══╝$FG     ██$BG╔═$FG██$BG╗  ╚═══$FG██$BG╗$FG██$BG╔═$FG██$BG╗$FG
+    #                                  ███████$BG╗$FG██$BG║$FG██$BG║ ╚$FG████$BG║╚$FG██████$BG╔╝$FG██$BG╔╝ $FG██$BG╗       $FG██$BG║   ╚$FG██████$BG╔╝$FG██$BG║         $FG██$BG║ $FG ██$BG╗$FG██████$BG╔╝$FG██$BG║ $FG ██$BG╗
+    #                                  ╚══════╝╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝       ╚═╝    ╚═════╝ ╚═╝         ╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═╝
+    # \e[39m\e[49m"
+    # echo 'Bootin Up huh?'
+    echo " "
+    #ucurl wttr.in/Stuttgart?0 --silent --max-time 3
+    #echo " "
+    #echo " "
+    #sleep 2
+    exec startx
+fi
+
+
+## Sync bashrc with synced (private) bashrc...
 test -s ~/Sync/Creations/Rice/.bashrc && . ~/Sync/Creations/Rice/.bashrc || true
-alias python=python3.5
+
+#alias python=python3.5
 
 ################################################################
 # BASICS
 ################################################################
 alias c="clear"
-alias cat="lolcat"
-# alias q="exit"
+#alias cat="lolcat"
+#alias q="exit"
 alias ll="ls -l"
 alias ls="ls --color=always --group-directories-first"
 alias sl="ls --color=always --group-directories-first"
@@ -33,9 +74,10 @@ alias q="qutebrowser"
 alias r="ranger"
 alias sr="sudo ranger"
 alias m="mupdf"
-alias music="cmus"
+alias music="musikcube"
+#alias ch="curl cheat.sh/"
 
-
+#alias vim="nvim"
 alias bs="vim ~/.bashrc"
 alias xcfg="vim -p ~/.bashrc ~/.Xdefaults ~/.xinitrc ~/"
 
@@ -52,6 +94,7 @@ alias gstat="git status"
 alias gcheck="git checkout"
 alias gpull="git pull"
 alias clean="make clean"
+alias lazy="git commit -m 'Here, have some code...'"
 
 ################################################################
 # STUFF
@@ -183,3 +226,19 @@ CDPATH="."
 # This allows you to bookmark your favorite places across the file system
 # Define a variable containing a path and you will be able to cd into it regardless of the directory you"re in
 shopt -s cdable_vars
+alias vim='nvim'
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/bluzuk/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/bluzuk/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/bluzuk/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/bluzuk/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
